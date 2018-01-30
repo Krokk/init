@@ -1,0 +1,2 @@
+/etc/resolv.conf qui est un lien symbolique qui pointe vers ->
+/private/var/run/resolv.conf

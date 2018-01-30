@@ -1,0 +1,1 @@
+nslookup slash16.org | grep "Address" | head -n 1 | cut -d ":" -f2 | cut -d "#" -f1 | sed 's/^[[:space:]]*//g'
