@@ -1,0 +1,8 @@
+edition de la cron tab :crontab -e
+
+programmation du la cron : 0 4 * * 1 /path/nomduscript
+
+script:
+#!/bin/bash
+
+apt-get update >> /var/log/update.script && apt-get dist-upgrade >> /var/log/update.script

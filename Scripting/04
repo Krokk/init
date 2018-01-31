@@ -1,0 +1,17 @@
+edition de la cron tab :crontab -e
+
+programmation du la cron : 0 0 * * * /path/nomduscript
+
+script:
+
+#!/bin/bash
+
+Oldmd5sum = 'cat path/file'
+md5sum = 'md5sum /etc/crontab | cut -d " " -f 1'
+
+
+if [$md5sum != $Oldmd5sum]
+then
+    md5sum /etc/crontab | cut -d " " -f 1 > /path/md5save
+    mail -s "crontab been modified" adress@host.com < /path/md5save
+fi
